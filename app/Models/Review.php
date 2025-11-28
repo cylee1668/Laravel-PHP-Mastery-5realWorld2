@@ -9,6 +9,13 @@ class Review extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'review',
+        'rating',
+        'book_id', // 如果你要用 for($book) 或 create() 時自動填入
+    ];
+
+
     public function book()
     {
         return $this->belongsTo(Book::class);
