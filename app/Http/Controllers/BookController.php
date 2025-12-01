@@ -23,6 +23,7 @@ class BookController extends Controller
         ->get();
 
         return view('books.index', ['books' => $books]);
+        
     }
 
     /**
